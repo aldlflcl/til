@@ -9,7 +9,7 @@
 ### json
 
 ```java
-    @RequestBody =>요청 바디내용을 받을수 있게 해준다.
+@RequestBody =>요청 바디내용을 받을수 있게 해준다.
 @RequestBody String data=>String 타입일 경우 바디 내용이 문자열 그대로 들어온다.
 @RequestBody HelloData data=>요청 바디 내용이 Json형식이면 자동으로 매핑됨.
 ```
@@ -117,10 +117,10 @@ public String addItemV6(Item item,RedirectAttributes redirectAttributes){
         redirectAttributes.addAttribute("status",true);
 
         return"redirect:/basic/items/{itemId}";
-}
+        }
 
-addAttribute()메소드를 사용하면 키 밸류로 값을 저장가능하고
-return할때 {...}에 추가하면 해당 url로 리다이렉트하고 {...}에 사용되어지지 않으면
-url뒤에 쿼리파라미터로 붙는다
-ex) /basic/items/{itemId}?status=true
+        addAttribute()메소드를 사용하면 키 밸류로 값을 저장가능하고
+        return할때{...}에 추가하면 해당 url로 리다이렉트하고{...}에 사용되어지지 않으면
+        url뒤에 쿼리파라미터로 붙는다
+        ex)/basic/items/{itemId}?status=true
 ```
